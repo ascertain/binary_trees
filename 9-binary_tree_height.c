@@ -16,7 +16,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	right = binary_tree_height(tree->right);
 	return (max(left, right) + 1);
 }
+/**
+ * max - returns the maximum number among the two arguments
+ * @a: first argument number
+ * @b: second argument number
+ * Return: the highest number
+ */
 size_t max(size_t a, size_t b)
 {
-	return (a > b) ? a : b;
+	return ((a > b) ? a : b);
 }
