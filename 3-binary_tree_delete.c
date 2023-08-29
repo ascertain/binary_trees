@@ -13,6 +13,11 @@ void binary_tree_delete(binary_tree_t *tree)
 	binary_tree_delete(node->left);
 	binary_tree_delete(node->right);
 	if (node->right == NULL && node->left == NULL)
+	{
+		node->parent = NULL;
+		node->right = NULL;
+		node->left = NULL;
 		free(node);
-	free(tree);
+	}
+	free(node);
 }
