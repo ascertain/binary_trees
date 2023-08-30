@@ -16,3 +16,13 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 	rht = binary_tree_nodes(tree->right);
 	return (add(lft, rht) + 1);
 }
+/**
+ * add - adds two nodes
+ * @a: first node
+ * @b: second node
+ * Return: the addition
+ */
+size_t add(size_t a, size_t b)
+{
+	return (a + b);
+}
